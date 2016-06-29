@@ -10,7 +10,7 @@ var autoprefix = new LessPluginAutoPrefix({ browsers: ["last 2 versions"] })
 
 var compileLess = function() {
     var plugins = [autoprefix]
-    return gulp.src(['./less/part-1.less'])
+    return gulp.src(['./less/part-1.less', './less/part-3.less'])
         .pipe(sourcemaps.init())
         .pipe(less({ plugins: [autoprefix] }))
         .pipe(sourcemaps.write())
